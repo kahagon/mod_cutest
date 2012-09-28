@@ -1,0 +1,14 @@
+*.o
+*.lo
+*.slo
+*.obj
+*.a
+*.la
+.libs
+autom4te.cache
+config.h
+config.log
+config.status
+configure
+definition.mk
+nbproject/private
