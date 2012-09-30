@@ -1,0 +1,40 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.68])
+AC_INIT([mod_cutest], [0.0.1], [oasynnoum@gmail.com])
+AM_INIT_AUTOMAKE
+AC_CONFIG_SRCDIR([CuTest.h])
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_APXS
+AC_PROG_APACHCTL
+
+EXP_INSTALLBUILDDIR=`$APXS -q installbuilddir`
+EXP_TOP_BUILDDIR="${EXP_INSTALLBUILDDIR}/../"
+#EXP_TOP_SRCDIR=$EXP_TOP_BUILDDIR
+#AC_SUBST([EXP_INSTALLBUILDDIR])
+AC_SUBST([EXP_TOP_BUILDDIR])
+#AC_SUBST([EXP_TOP_SRCDIR])
+
+rm -rf ./build
+cp -R ${EXP_TOP_BUILDDIR}/build ./
+
+# Checks for libraries.
+# FIXME: Replace `main' with a function in `-lapreq2':
+AC_CHECK_LIB([apreq2], [main])
+
+# Checks for header files.
+AC_CHECK_HEADERS([limits.h stdlib.h string.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_FUNC_REALLOC
+AC_CHECK_FUNCS([memmove memset realpath])
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

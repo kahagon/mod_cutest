@@ -5,11 +5,16 @@
 *.a
 *.la
 .libs
+Makefile
+Makefile.in
+aclocal.m4
 autoscan.log
 autom4te.cache
+build
 config.h
 config.log
 config.status
 configure
 definition.mk
 nbproject/private
+missing
