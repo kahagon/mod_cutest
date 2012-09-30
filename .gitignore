@@ -5,6 +5,7 @@
 *.a
 *.la
 .libs
+autoscan.log
 autom4te.cache
 config.h
 config.log
