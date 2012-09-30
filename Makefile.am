@@ -10,27 +10,27 @@ builddir=.
 #top_builddir=@EXP_TOP_BUILDDIR@
 include $(top_builddir)/build/special.mk
 
-#   the used tools
-#APXS=apxs
-#APACHECTL=apachectl
-
 #   additional defines, includes and libraries
 #DEFS=-Dmy_define=my_value
 #INCLUDES=-Imy/include/dir
 #LIBS=-Lmy/lib/dir -lmylib
-INCLUDES=`pkg-config --cflags apr-1` `apreq2-config --includes`
-LIBS = `pkg-config --libs apr-1` `apreq2-config --ldflags --includes` -lapreq2
-CFLAGS = $(INCLUDES) $(LIBS)
+NOTEST_CFLAGS = `pkg-config --cflags --libs apr-1` `apreq2-config --ldflags --includes` -lapreq2
 
 #   the default target
 all: local-shared-build
 
+modcutest-config:
+	cat modcutest-config.sh | \
+		sed -e "s#%%MODCUTEST_INCLUDEDIR%%#@MODCUTEST_INCLUDEDIR@#g" | \
+		sed -e "s#%%MODCUTEST_LIBEXECDIR%%#@MODCUTEST_LIBEXECDIR@#g" \
+			> modcutest-config
+	chmod +x modcutest-config
+
 #   install the shared object file into Apache 
-install: install-modules-yes
-	install -d /usr/local/include/ /usr/local/lib/ /usr/local/bin/
-	cp CuTest.h /usr/local/include/
-	install -D modcutest-config.sh /usr/local/bin/modcutest-config
-	install -D .libs/libmodcutest.so /usr/local/lib/
+install: modcutest-config install-modules-yes
+	install -d @MODCUTEST_INCLUDEDIR@ @MODCUTEST_BINDIR@
+	cp CuTest.h @MODCUTEST_INCLUDEDIR@
+	install -D modcutest-config @MODCUTEST_BINDIR@
 	ldconfig
 
 #   cleanup

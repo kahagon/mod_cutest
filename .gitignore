@@ -18,3 +18,4 @@ configure
 definition.mk
 nbproject/private
 missing
+modcutest-config

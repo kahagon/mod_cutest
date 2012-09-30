@@ -2,9 +2,9 @@
 <configurationDescriptor version="84">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df name="mod_cutest" root=".">
-      <df name=".libs">
-        <in>libmodcutest.lai</in>
-        <in>mod_cutest.lai</in>
+      <df name="autom4te.cache">
+      </df>
+      <df name="build">
       </df>
       <in>CuTest.c</in>
       <in>CuTest.h</in>

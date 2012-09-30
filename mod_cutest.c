@@ -40,6 +40,7 @@
 #include <dlfcn.h>
 #include <limits.h>
 #include "CuTest.h"
+#include "apreq_param.h"
 
 static char *cutest_get_target_dl_path(request_rec *r) {
     if (!r->args) return NULL;
