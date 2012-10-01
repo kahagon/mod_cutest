@@ -10,9 +10,6 @@
 #include <string.h>
 #include <math.h>
 #include "httpd.h"
-#include "http_config.h"
-#include "http_protocol.h"
-#include "ap_config.h"
 
 #define CUTEST_VERSION  "CuTest 1.5"
 

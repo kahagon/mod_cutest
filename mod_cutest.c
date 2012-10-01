@@ -39,8 +39,12 @@
 
 #include <dlfcn.h>
 #include <limits.h>
-#include "CuTest.h"
+#include "httpd.h"
+#include "http_config.h"
+#include "http_protocol.h"
+#include "ap_config.h"
 #include "apreq_param.h"
+#include "CuTest.h"
 
 static char *cutest_get_target_dl_path(request_rec *r) {
     if (!r->args) return NULL;
