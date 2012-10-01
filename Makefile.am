@@ -29,7 +29,7 @@ modcutest-config:
 #   install the shared object file into Apache 
 install: modcutest-config install-modules-yes
 	install -d @MODCUTEST_INCLUDEDIR@ @MODCUTEST_BINDIR@
-	cp CuTest.h @MODCUTEST_INCLUDEDIR@/ModCuTest.h
+	cp ModCuTest.h @MODCUTEST_INCLUDEDIR@/ModCuTest.h
 	install -D modcutest-config @MODCUTEST_BINDIR@
 	ldconfig
 

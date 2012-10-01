@@ -44,7 +44,7 @@
 #include "http_protocol.h"
 #include "ap_config.h"
 #include "apreq_param.h"
-#include "CuTest.h"
+#include "ModCuTest.h"
 
 static char *cutest_get_target_dl_path(request_rec *r) {
     if (!r->args) return NULL;

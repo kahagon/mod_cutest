@@ -4,7 +4,7 @@
 AC_PREREQ([2.68])
 AC_INIT([mod_cutest], [0.0.1], [oasynnoum@gmail.com])
 AM_INIT_AUTOMAKE
-AC_CONFIG_SRCDIR([CuTest.h])
+AC_CONFIG_SRCDIR([ModCuTest.h])
 
 # Checks for programs.
 AC_PROG_CC
