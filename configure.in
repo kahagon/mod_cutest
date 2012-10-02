@@ -13,17 +13,15 @@ AC_PROG_APXS
 AC_PROG_APACHCTL
 
 INSTALLBUILDDIR=`$APXS -q installbuilddir`
-TOP_BUILDDIR="${INSTALLBUILDDIR}/../"
-MODCUTEST_INCLUDEDIR="/usr/local/include/"
-MODCUTEST_BINDIR="/usr/local/bin/"
+MODCUTEST_INCLUDEDIR=`$APXS -q includedir`
+MODCUTEST_BINDIR=`$APXS -q bindir`
 MODCUTEST_LIBEXECDIR=`$APXS -q libexecdir`
-AC_SUBST([EXP_TOP_BUILDDIR])
 AC_SUBST([MODCUTEST_INCLUDEDIR])
 AC_SUBST([MODCUTEST_BINDIR])
 AC_SUBST([MODCUTEST_LIBEXECDIR])
 
 rm -rf ./build
-cp -R ${TOP_BUILDDIR}/build ./
+cp -R ${INSTALLBUILDDIR} ./
 
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lapreq2':

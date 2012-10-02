@@ -11,10 +11,10 @@ fi
 
 case $1 in
     --cflags)
-        echo "-I%%MODCUTEST_INCLUDEDIR%%"
+        echo "-I%MODCUTEST_INCLUDEDIR%"
         ;;
     --libs)
-        echo "-L%%MODCUTEST_LIBEXECDIR%% -lmodcutest"
+        echo "-L%MODCUTEST_LIBEXECDIR% -lmodcutest"
         ;;
     *)
         usage_exit
