@@ -132,22 +132,6 @@ other functions and write tests for them be sure to include those
 in `CuGetSuite()` also. The `CuGetSuite()` function should
 include all the tests in mod_modcutest_example.c
 
-WHAT TO DO NEXT
---------------
-At this point you might want to write more tests for the
-StrToUpper function. Here are some ideas:
-
-`TestStrToUpper_EmptyString` : pass in ""  
-`TestStrToUpper_UpperCase`   : pass in "HELLO WORLD"  
-`TestStrToUpper_MixedCase`   : pass in "HELLO world"  
-`TestStrToUpper_Numbers`     : pass in "1234 hello"
-
-As you write each one of these tests add it to `CuGetSuite()`.  
-If you don't the tests won't be run. Later as you write
-other functions and write tests for them be sure to include those
-in `CuGetSuite()` also. The `CuGetSuite()` function should
-include all the tests in mod_modcutest_example.c
-
 CuTest offers a rich set of CuAssert functions. Here is a list:
 
     void CuAssert(CuTest* tc, char* message, int condition);
