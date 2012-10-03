@@ -159,10 +159,4 @@ CuTest offers a rich set of CuAssert functions. Here is a list:
 
 CREDITS
 --------------
-These people have contributed useful code changes to the CuTest project.
-Thanks!
-
-- [02.23.2003] Dave Glowacki <dglo@hyde.ssec.wisc.edu>
-- [04.17.2009] Tobias Lippert <herrmarder@googlemail.com>
-- [11.13.2009] Eli Bendersky <eliben@gmail.com>
-- [12.14.2009] Andrew Brown <abrown@datasci.com>
+Please look out AUTHORS file!
