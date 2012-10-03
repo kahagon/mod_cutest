@@ -16,8 +16,8 @@ Rough program for running test is below.
 
 Install
 --------------
-    $ git clone https://github.com/oasynnoum/mod_mathtex.git  
-    $ cd mod_mathtex  
+    $ git clone https://github.com/oasynnoum/mod_cutest.git
+    $ cd mod_cutest
     $ ./configure
     $ make
     $ sudo make install
