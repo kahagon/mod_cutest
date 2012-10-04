@@ -13,7 +13,7 @@ build
 config.h
 config.log
 config.status
+configure
 definition.mk
 nbproject/private
-missing
 modcutest-config
