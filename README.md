@@ -4,7 +4,7 @@ CuTest integration for Apache module development.
 CuTest is an Unit Testing Framework for C.
 [CuTest WEB site](http://cutest.sourceforge.net/)  
 The purpose of mod_cutest is to be able to treat actual Apache data structures 
-in CuTest unit test.
+(e.g. request_rec) in CuTest unit test.
 
 Rough program for running test is below.
 
