@@ -3,7 +3,6 @@
 
 AC_PREREQ([2.68])
 AC_INIT([mod_cutest], [0.0.1], [oasynnoum@gmail.com])
-AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([ModCuTest.h])
 
 AC_DEFUN([AC_PROG_APXS], [
@@ -48,6 +47,18 @@ AC_SUBST([MODCUTEST_LIBEXECDIR])
 rm -rf ./build
 cp -R ${INSTALLBUILDDIR} ./
 
+INSTALLBUILDDIR=`$APXS -q installbuilddir`
+TOP_BUILDDIR="${INSTALLBUILDDIR}/../"
+TOP_SRCDIR=$TOP_BUILDDIR
+body="top_srcdir=$TOP_SRCDIR
+top_builddir=$TOP_BUILDDIR
+APXS=$APXS
+APACHECTL=$APACHECTL
+modcutest_includedir=`$APXS -q includedir`
+modcutest_libexecdir=`$APXS -q libexecdir`
+modcutest_bindir=`$APXS -q bindir`"
+echo "$body" > definition.mk
+
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lapreq2':
 AC_CHECK_LIB([apreq2], [main])
@@ -62,5 +73,4 @@ AC_FUNC_MALLOC
 AC_FUNC_REALLOC
 AC_CHECK_FUNCS([memmove memset realpath])
 
-AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

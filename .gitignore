@@ -5,7 +5,6 @@
 *.a
 *.la
 .libs
-Makefile
 aclocal.m4
 autoscan.log
 autom4te.cache

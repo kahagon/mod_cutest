@@ -4,6 +4,7 @@
 ##
 
 builddir=.
+include ./definition.mk
 include $(top_builddir)/build/special.mk
 
 #   additional defines, includes and libraries
@@ -30,15 +31,15 @@ install: modcutest-config install-modules-yes
 	ldconfig
 
 uninstall:
-	rm @MODCUTEST_INCLUDEDIR@/ModCuTest.h
-	rm @MODCUTEST_BINDIR@/modcutest-config
-	rm @MODCUTEST_LIBEXECDIR@/mod_cutest.so
-	rm @MODCUTEST_LIBEXECDIR@/libmodcutest.so
+	rm -f @MODCUTEST_INCLUDEDIR@/ModCuTest.h
+	rm -f @MODCUTEST_BINDIR@/modcutest-config
+	rm -f @MODCUTEST_LIBEXECDIR@/mod_cutest.so
+	rm -f @MODCUTEST_LIBEXECDIR@/libmodcutest.so
 
 #   cleanup
 clean:
 	-rm -f mod_cutest.o mod_cutest.lo mod_cutest.slo mod_cutest.la 
-	rm modcutest-config
+	rm -f modcutest-config
 
 #   simple test
 test: reload
