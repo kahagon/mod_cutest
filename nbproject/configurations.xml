@@ -5,25 +5,8 @@
       <df name=".libs">
       </df>
       <df name="autom4te.cache">
-        <in>output.0</in>
-        <in>output.1</in>
-        <in>output.2</in>
-        <in>requests</in>
-        <in>traces.0</in>
-        <in>traces.1</in>
-        <in>traces.2</in>
       </df>
       <df name="build">
-        <in>config.nice</in>
-        <in>config_vars.mk</in>
-        <in>envvars-std</in>
-        <in>instdso.sh</in>
-        <in>library.mk</in>
-        <in>ltlib.mk</in>
-        <in>mkdir.sh</in>
-        <in>program.mk</in>
-        <in>rules.mk</in>
-        <in>special.mk</in>
       </df>
       <in>ModCuTest.c</in>
       <in>ModCuTest.h</in>

@@ -57,7 +57,8 @@ contents:
         return str;
     }
 
-    void TestStrToUpper(CuTest *tc) {
+    /* the second argument is an instance of request_rec. */
+    void TestStrToUpper(CuTest *tc, request_rec *r) {
         char* input = strdup("hello world");
         char* actual = StrToUpper(input);
         char* expected = "HELLO WORLD";
